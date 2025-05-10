@@ -7,7 +7,7 @@
   app.use(express.json());
 
   const db = mysql.createConnection({
-      host: "localhost",
+      host: "host.docker.internal",
       user: "root",
       password: "",
       database: "empleados"

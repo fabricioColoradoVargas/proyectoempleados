@@ -1,0 +1,15 @@
+FROM node:18
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
+EXPOSE 3001
+
+CMD ["node", "index.js"]
